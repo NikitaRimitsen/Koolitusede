@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Koolitusede.Models.Koolitus>
+
+@{
+    ViewBag.Title = "Koolitus";
+}
+
+<h2>Koolitus</h2>
+
+<p>
+    @Html.ActionLink("Lisa Uus", "CreateKoolitus")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Koolitusenimetus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Koolitusekirjaldus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OpetajaId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Koolitusehind)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Koolitusemaht)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Koolitusenimetus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Koolitusekirjaldus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OpetajaId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Koolitusehind)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Koolitusemaht)
+        </td>
+        <td>
+            @Html.ActionLink("Muutma", "EditKoolitus", new { id=item.Id }) |
+            @Html.ActionLink("Kustuta", "DeleteKoolitus", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
