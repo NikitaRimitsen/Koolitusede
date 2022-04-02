@@ -1,7 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-image: url("../Images/beze.jpg");
+    background-image: url("../Images/oboi.jpg");
     /*background: url("../Images/gif.gif");*/
     /*background-color: #FFE4B5;*/
     background-size: 100%;
@@ -18,3 +18,20 @@ select,
 textarea {
     max-width: 280px;
 }
+
+tr{
+    background-color: white;
+}
+h2, h3{
+    color: white;
+}
+h2#index{
+    color:black;
+}
+p{
+    color: white;
+}
+address{
+    color: white;
+}
+

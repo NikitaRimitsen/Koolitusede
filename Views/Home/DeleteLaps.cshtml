@@ -4,45 +4,47 @@
     ViewBag.Title = "DeleteLaps";
 }
 
-<h2>DeleteLaps</h2>
+<h2>Kustutama Laps</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Kas olete kindel, et soovite selle kustutada?</h3>
 <div>
     <h4>Laps</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.LapseEesnimi)
-        </dt>
+    <div class="jumbotron">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.LapseEesnimi)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.LapseEesnimi)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.LapseEesnimi)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LapsePerenimi)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.LapsePerenimi)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.LapsePerenimi)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.LapsePerenimi)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Sunniaasta)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Sunniaasta)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Sunniaasta)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Sunniaasta)
+            </dd>
 
-    </dl>
-
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Laps")
+        </dl>
         </div>
-    }
-</div>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Kustutama" class="btn btn-default" /> |
+                @Html.ActionLink("Tagasi nimekirja", "Laps", null, new { @class = "btn btn-primary" })
+            </div>
+        }
+    </div>

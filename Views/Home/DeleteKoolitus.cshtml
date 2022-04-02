@@ -4,61 +4,64 @@
     ViewBag.Title = "DeleteKoolitus";
 }
 
-<h2>DeleteKoolitus</h2>
+<h2>KustutamaKoolitus</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Kas olete kindel, et soovite selle kustutada?</h3>
+
 <div>
     <h4>Koolitus</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Koolitusenimetus)
-        </dt>
+    <div class="jumbotron">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Koolitusenimetus)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Koolitusenimetus)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Koolitusenimetus)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Koolitusekirjaldus)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Koolitusekirjaldus)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Koolitusekirjaldus)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Koolitusekirjaldus)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.OpetajaId)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.OpetajaId)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.OpetajaId)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.OpetajaId)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Koolitusehind)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Koolitusehind)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Koolitusehind)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Koolitusehind)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Koolitusemaht)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Koolitusemaht)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Koolitusemaht)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Koolitusemaht)
+            </dd>
 
-    </dl>
-
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+        </dl>
         </div>
-    }
-</div>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Kustutama" class="btn btn-default" /> |
+                @Html.ActionLink("Tagasi nimekirja", "Koolitus", null, new { @class = "btn btn-primary" })
+            </div>
+        }
+    </div>
