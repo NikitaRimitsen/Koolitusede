@@ -196,6 +196,7 @@
     <Content Include="Images\beze.jpg" />
     <Content Include="Images\eu-liit.jpg" />
     <Content Include="Images\Kooli.jpg" />
+    <Content Include="Images\Kooli_lu.jpg" />
     <Content Include="Images\oboi.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -246,7 +247,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Home\Koolitus.cshtml" />
     <Content Include="Views\Home\Laps.cshtml" />
     <Content Include="Views\Home\Opetaja.cshtml" />
     <Content Include="Views\Home\Createlaps.cshtml" />
@@ -258,6 +258,7 @@
     <Content Include="Views\Home\CreateKoolitus.cshtml" />
     <Content Include="Views\Home\DeleteKoolitus.cshtml" />
     <Content Include="Views\Home\EditKoolitus.cshtml" />
+    <Content Include="Views\Home\Koolitus.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -56,6 +56,7 @@ namespace Koolitusede.Controllers
             return View();
         }
         [HttpPost]
+        [Authorize]
         public ActionResult CreateKoolitus(Koolitus koolitus)
         {
             db.Koolituss.Add(koolitus);
@@ -64,6 +65,7 @@ namespace Koolitusede.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public ActionResult DeleteKoolitus(int Id)
         {
             Koolitus go = db.Koolituss.Find(Id);
@@ -88,6 +90,7 @@ namespace Koolitusede.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public ActionResult EditKoolitus(int? id)
         {
             Koolitus go = db.Koolituss.Find(id);
@@ -109,14 +112,14 @@ namespace Koolitusede.Controllers
 
 
         //------------------------------------------------------
-        //[Authorize]
+        [Authorize]
         public ActionResult Laps()
         {
             IEnumerable<Laps> laps = db.Lapss;
             return View(laps);
         }
         [HttpGet]
-        //[Authorize]
+        [Authorize]
         public ActionResult Createlaps()
         {
             return View();
@@ -177,7 +180,7 @@ namespace Koolitusede.Controllers
             IEnumerable<Opetaja> opetaja = db.Opetajas;
             return View(opetaja);
         }
-
+        [Authorize]
         public ActionResult Createopetaja()
         {
             return View();
@@ -191,6 +194,7 @@ namespace Koolitusede.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public ActionResult DeleteOpetaja(int Id)
         {
             Opetaja go = db.Opetajas.Find(Id);
@@ -215,6 +219,7 @@ namespace Koolitusede.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public ActionResult EditOpetaja(int? id)
         {
             Opetaja go = db.Opetajas.Find(id);
